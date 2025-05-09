@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rincón del Fiore di Latte</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #fdfaf6;
+      color: #4a3b2c;
+    }
+
+    header {
+      background-color: #e8dfd3;
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 2px solid #c4b7a6;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+    }
+
+    nav {
+      background-color: #d4c4b2;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: #4a3b2c;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      border-bottom: 1px solid #c4b7a6;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .menu-item {
+      margin-bottom: 1rem;
+    }
+
+    .menu-item img {
+      width: 120px;
+      height: auto;
+      vertical-align: middle;
+      margin-right: 10px;
+      border-radius: 8px;
+    }
+
+    .menu-item .info {
+      display: inline-block;
+      vertical-align: middle;
+      max-width: 700px;
+    }
+
+    .social-buttons {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .social-buttons a {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 10px 20px;
+      background-color: #4a3b2c;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    footer {
+      background-color: #e8dfd3;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      border-top: 2px solid #c4b7a6;
+    }
+
+    .img-banner {
+      width: 100%;
+      max-height: 350px;
+      object-fit: cover;
+      margin-bottom: 2rem;
+    }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.tab-content').forEach(section => section.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      showSection('inicio');
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Rincón del Fiore di Latte</h1>
+    <p>Helados artesanales con alma italiana</p>
+
+  </header>
+
+  <nav>
+    <a onclick="showSection('inicio')">Inicio</a>
+    <a onclick="showSection('menu')">Menú</a>
+    <a onclick="showSection('paletas')">Paletas</a>
+    <a onclick="showSection('quienes')">Quiénes Somos</a>
+    <a onclick="showSection('domicilio')">Domicilio</a>
+    <a onclick="showSection('contacto')">Contacto</a>
+  </nav>
+
+  <section id="inicio" class="tab-content">
+    <h2>Misión</h2>
+    <p>Brindar una experiencia de sabor auténtica y natural a través de helados artesanales inspirados en la tradición italiana, elaborados con pasión, frescura y calidad.</p>
+    <img src=https://img.freepik.com/vector-gratis/lindo-cono-helado-sosteniendo-paja-dibujos-animados-vector-icono-ilustracion-comida-objeto-icono-concepto-aislado_138676-6366.jpg?semt=ais_hybrid&w=740>
+<h2>Visión</h2>
+    <p>Convertirnos en la heladería artesanal preferida de Guatemala, siendo un referente de calidad, tradición y servicio personalizado.</p>
+ <img src=https://i.pinimg.com/564x/c4/42/7c/c4427c3a6b12d5538d58af07ef07dd93.jpg> 
+</section>
+
+  <section id="menu" class="tab-content">
+    <h2>Menú de Helados</h2>
+    <div class="menu-item">
+      <img src="https://images.unsplash.com/photo-1601924582975-4cc9fa9a3a4c" alt="Helado Vainilla">
+      <div class="info">
+        <strong>Helado de Vainilla Italiana</strong> - Q20 <br>
+        Cremoso, artesanal y de sabor clásico.
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="https://images.unsplash.com/photo-1603046891443-f149ccf36685" alt="Helado Chocolate">
+      <div class="info">
+        <strong>Helado de Chocolate Amargo</strong> - Q22 <br>
+        Rico en cacao, para los verdaderos amantes del chocolate.
+      </div>
+    </div>
+  </section>
+
+  <section id="paletas" class="tab-content">
+    <h2>Paletas Artesanales</h2>
+    <div class="menu-item">
+      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Paleta Fresa">
+      <div class="info">
+        <strong>Paleta de Fresa Natural</strong> - Q10 <br>
+        Refrescante y frutal.
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="https://images.unsplash.com/photo-1627308595181-a271b6f6aa9c" alt="Paleta Mango">
+      <div class="info">
+        <strong>Paleta de Mango con Chamoy</strong> - Q12 <br>
+        Dulce, ácida y picante.
+      </div>
+    </div>
+  </section>
+
+  <section id="quienes" class="tab-content">
+    <h2>¿Quiénes Somos?</h2>
+    <p>Somos una heladería de estilo vintage con esencia italiana. Nuestra pasión es crear experiencias a través de sabores auténticos, inspirados en tradiciones familiares y productos frescos. En cada paleta y bola de helado llevamos un pedacito de historia.</p>
+  </section>
+
+  <section id="domicilio" class="tab-content">
+    <h2>Servicio a Domicilio</h2>
+    <p>Entrega en zona 1 a zona 16 en la ciudad de Guatemala. Pedido mínimo Q25. Horario de entrega: 12:00 pm - 8:00 pm.</p>
+  </section>
+
+  <section id="contacto" class="tab-content">
+    <h2>Contacto</h2>
+    <div class="social-buttons">
+      <a href="https://wa.me/50212345678" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="https://instagram.com/fioredilattegt" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Rincón del Fiore di Latte | Todos los derechos reservados
+  </footer>
+</body>
+</html>
